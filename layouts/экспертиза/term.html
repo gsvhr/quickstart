@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ "<!-- экспертиза/term.html -->" | safeHTML }}
+<ul>
+  {{ range .Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      ({{ .Date.Format "02.01.2006" }})
+    </li>
+  {{ end }}
+</ul>
+{{ end }}

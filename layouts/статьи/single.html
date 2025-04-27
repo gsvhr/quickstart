@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ "<!-- статьи/single.html -->" | safeHTML }}
+<article>
+  
+  <div>
+    <span>{{ .Date.Format "02.01.2006" }}</span>
+    
+    {{ with .Params.экспертиза }}
+      <div>        
+        {{ range . }}
+          <a href="{{ "/экспертиза/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ with .Params.метки }}
+      <div>
+        Метки: 
+        {{ range . }}
+          <a href="{{ "/метки/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+
+  <div>
+    {{ .Content }}
+  </div>
+
+  <div>
+    {{ with .PrevInSection }}
+      <a href="{{ .RelPermalink }}">← {{ .Title }}</a>
+    {{ end }}
+    
+    {{ with .NextInSection }}
+      <a href="{{ .RelPermalink }}">{{ .Title }} →</a>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,11 @@
+<section class="faq">
+    <h2>Часто задаваемые вопросы</h2>
+    <div class="faq-items">
+      {{ range .Site.Data.faq }}
+      <details class="faq-item">
+        <summary class="faq-question">{{ .question }}</summary>
+        <div class="faq-answer">{{ .answer | markdownify }}</div>
+      </details>
+      {{ end }}
+    </div>
+  </section>

@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" type="image/x-icon" sizes="any">
+
+{{/* Title */}}
+<title itemprop="name">
+  {{ if .IsHome }}
+    {{ .Site.Params.description }} |
+    {{ .Title }}
+  {{ else }}
+    {{ .Title }} |
+    {{ .Site.Title }}
+  {{ end }}
+</title>
+
+{{/* Description */}}
+{{ if .Description }}
+  <meta name="description" content="{{ .Description }}">
+{{ else if .Summary }}
+  <meta name="description" content="{{ .Summary | plainify | truncate 160 }}">
+{{ else if .Site.Params.description }}
+  <meta name="description" content="{{ .Site.Params.description }}">
+{{ end }}
+
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  img {
+    max-width: 100%;
+  }
+  .breadcrumb ol {
+    padding-left: 0;
+  }
+  .breadcrumb li {
+    display: inline;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    content: "»";
+  }
+</style>

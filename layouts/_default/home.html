@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <section>{{ .Content | emojify }}</section>
+  {{ range first 6 (where .Site.RegularPages "Section" "статьи") }}
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Date.Format "2.01.2006" }}</p>
+{{ end }}
+{{ end }}

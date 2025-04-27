@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body>
+    <header>
+      {{ partial "header" . }}
+      {{ partial "breadcrumbs" . }}
+    </header>
+    <main>      
+      {{ block "main" . }}{{ end }}
+    </main>
+    <aside>
+      {{ block "sidebar" . }}{{ partial "sections/servicelist" . }}{{ end }}    
+    </aside>
+    <footer>
+      {{ partial "footer" . }}
+    </footer>
+  </body>
+</html>

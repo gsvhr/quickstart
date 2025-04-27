@@ -1,0 +1,17 @@
+<section class="servicelist">
+{{/*  
+{{ $servicesPages := slice }}
+            {{ with .Site.Taxonomies.services }}
+              {{ range . }}
+                {{ $servicesPages = $servicesPages | append .Page }}
+              {{ end }}
+            {{ end }}
+            {{ range $servicesPages.GroupByParam "group" "desc" }}
+              <h2>{{ .Key }}</h2>
+              <ul>
+                {{ range .Pages.ByParam "weight" }}
+                  <li><a href="{{ .RelPermalink }}">{{ .Params.listTitle | default .Title }}</a></li>
+                {{ end }}
+              </ul>
+            {{ end }}
+</section>  */}}

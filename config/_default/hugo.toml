@@ -1,0 +1,9 @@
+baseURL = "/"
+defaultContentLanguage = "ru"
+languageCode = "ru-RU"
+hasCJKLanguage = true
+title = "Судэксперт"
+
+[taxonomies]
+  category = "экспертиза"
+  tag = "метки"

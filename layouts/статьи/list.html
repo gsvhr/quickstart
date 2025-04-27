@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ "<!-- статьи/list.html -->" | safeHTML }}
+  
+  {{ .Content }}
+
+  {{ range where .Site.RegularPages "Type" "статьи" }}
+    <article>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <time>{{ .Date.Format "02.01.2006" }}</time>
+      <p>{{ .Summary }}</p>
+    </article>
+  {{ end }}
+{{ end }}
