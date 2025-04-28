@@ -30,7 +30,3 @@ title = "Судэксперт"
     name = "Контакты"
     url = "/контакты/"
     weight = 4
-
-[server]
-  disableLiveReload = false
-  watch = true  
