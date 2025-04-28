@@ -12,4 +12,4 @@
     {{ end }}
     </ul>
 </nav>
-<h1>{{ .Title }}</h1>
+<h1 class="{{ cond .IsHome "home-title" "title" }}">{{ .Title }}</h1>

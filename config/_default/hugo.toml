@@ -7,3 +7,30 @@ title = "Судэксперт"
 [taxonomies]
   category = "экспертиза"
   tag = "метки"
+
+
+[menu]
+  [[menu.main]]
+    identifier = "services"
+    name = "Услуги"
+    url = "/экспертиза/"
+    weight = 1
+  [[menu.main]]
+    identifier = "blog"
+    name = "Блог"
+    url = "/статьи/"
+    weight = 2
+  [[menu.main]]
+    identifier = "dictionary"
+    name = "Словарь"
+    url = "/метки/"
+    weight = 3
+  [[menu.main]]
+    identifier = "contacts"
+    name = "Контакты"
+    url = "/контакты/"
+    weight = 4
+
+[server]
+  disableLiveReload = false
+  watch = true  
